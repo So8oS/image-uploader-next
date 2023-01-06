@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, {useRef, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 
@@ -42,6 +44,7 @@ const copyImageToClipboard = () => {
         const ctx = canvas.getContext('2d');
         ctx?.drawImage(image, 0, 0);
         canvas.toBlob((blob) => {
+            // @ts-ignore
           navigator.clipboard.write([new ClipboardItem({'image/png': blob})]);
         }, 'image/png');
       };
