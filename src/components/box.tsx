@@ -68,7 +68,7 @@ const onImageChange = (event) => {
 
 
 return (
-    <div className='h-[30rem] bg-white w-[33rem] rounded-xl shadow-md flex flex-col items-center justify-evenly'>
+    <div className='h-[30rem] bg-white w-[20rem] md:w-[33rem] rounded-xl shadow-md flex flex-col items-center justify-evenly'>
         
         {  (files.length  || image.length) === 0 &&
             <div className='flex flex-col items-center' >
@@ -77,7 +77,7 @@ return (
         </div>
         }
 
-        <div {...getRootProps()} className='h-[13.5rem] w-[21rem] bg-[#F6F8FB] border border-dashed border-[#97BEF4] rounded-xl flex flex-col items-center justify-around'>
+        <div {...getRootProps()} className='h-[13.5rem] w-[18rem] md:w-[21rem] bg-[#F6F8FB] border border-dashed border-[#97BEF4] rounded-xl flex flex-col items-center justify-around'>
             <div className="flex flex-wrap h-full w-full">
                 {
                     files.length>0 ? (
